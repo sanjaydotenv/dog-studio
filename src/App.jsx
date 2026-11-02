@@ -12,8 +12,16 @@ const App = () => {
 
   return (
     <main className="bg-black w-full relative">
-      {/* Fixed 3D Canvas */}
-      <div className="fixed inset-0 pointer-events-none bg-[url(/background-m.png)] bg-cover">
+       <div className="images">
+          <img id='tomorrowland' src="/tommorowland.png" alt="" />
+          <img id='navy-pier' src="/navy-pier.png" alt="" />
+          <img id='msi-chicago' src="/msi-chicago.png" alt="" />
+          <img id='phone' src="/phone.png" alt="" />
+          <img id='kikk' src="/kikk.png" alt="" />
+          <img id='kennedy' src="/kennedy.png" alt="" />
+          <img id='opera' src="/opera.png" alt="" />
+        </div>
+      <div id="canvas-elem" className="fixed inset-0 pointer-events-none">
         <Canvas>
           <Dog />
         </Canvas>
@@ -22,7 +30,7 @@ const App = () => {
       {/* Scrollable Sections */}
       <section
         id="section-1"
-        className="h-screen w-full border border-white relative z-0 py-8 px-10 "
+        className="h-screen w-full   relative z-0 py-8 px-10 "
       >
         <nav className="w-full text-white flex justify-between">
           <div className="logo-ele h-[2rem] ">
@@ -54,11 +62,11 @@ const App = () => {
             <h1 className="font-semibold">Our Showreel</h1>
           </div>
           <div className="nal-menu group flex flex-col gap-1 items-end cursor-pointer">
-            <span className="border w-5"></span>
+            <span className=" w-5"></span>
 
-            <span className="border w-4 group-hover:w-5 duration-300 ease-in-out"></span>
+            <span className=" w-4 group-hover:w-5 duration-300 ease-in-out"></span>
 
-            <span className="border w-5"></span>
+            <span className=" w-5"></span>
           </div>
         </nav>
 
@@ -75,9 +83,9 @@ const App = () => {
 
       <section
         id="section-2"
-        className=" w-full border border-white relative z-0"
+        className=" w-full   relative z-0"
       >
-        <div className="h-[70vh] w-full border border-white relative z-0 flex">
+        <div className="h-[70vh] w-full   relative z-0 flex">
           <div className="left w-[50%] h-full "></div>
           <div className="right w-[50%] h-full flex flex-col gap-5 pl-28 text-white">
             <p className="w-85 text-2xl font-light ">
@@ -103,38 +111,38 @@ const App = () => {
           </div>
         </div>
 
-        <div className="w-[70%] flex flex-col items-start text-white gap-10 pl-18">
-          <div className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
+        <div id="leave-div" className="w-[70%] flex flex-col items-start text-white gap-10 pl-18">
+          <div img-title="tomorrowland" id="title" className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
             <small className="tracking-[3px]">2020 - ONGOING</small>
             <p className="text-7xl">Tomorrowland</p>
           </div>
 
-          <div className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
+          <div img-title="navy-pier" id="title" className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
             <small className="tracking-[3px]">2018 - TODAY</small>
             <p className="text-7xl">Navy Pier</p>
           </div>
 
-          <div className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
+          <div img-title="msi-chicago" id="title" className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
             <small className="tracking-[3px]">2015 - TODAY</small>
             <p className="text-7xl">MSI Chicago</p>
           </div>
 
-          <div className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
+          <div img-title="phone" id="title" className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
             <small className="tracking-[3px]">2016</small>
             <p className="text-7xl">This was Louises Phone</p>
           </div>
 
-          <div className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
+          <div img-title="kikk" id="title" className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
             <small className="tracking-[3px]">2012 - TODAY</small>
             <p className="text-7xl">KIKA Festival 2018</p>
           </div>
 
-          <div className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
+          <div img-title="kennedy" id="title" className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
             <small className="tracking-[3px]">2017</small>
             <p className="text-7xl">The Kennedy Center</p>
           </div>
 
-          <div className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
+          <div img-title="opera" id="title" className="grid grid-cols-[180px_1fr] gap-10 opacity-20 hover:opacity-100 transition-opacity duration-300 ease-in-out font-thin">
             <small className="tracking-[3px]">2016 - ONGOING</small>
             <p className="text-7xl">Royal Opera of Wallonia</p>
           </div>
@@ -143,7 +151,7 @@ const App = () => {
 
       <section
         id="section-3"
-        className="h-screen w-full border border-white relative z-0"
+        className="h-screen w-full   relative z-0"
       ></section>
     </main>
   );
