@@ -19,7 +19,7 @@ const Dog = () => {
   const model = useGLTF(dogModel);
 
   useThree(({ camera, scene, gl }) => {
-    camera.position.z = 1.6;
+    camera.position.z = 1.5;
     gl.toneMapping = THREE.ReinhardToneMapping;
     gl.outputColorSpace = THREE.SRGBColorSpace;
   });
